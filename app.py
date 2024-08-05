@@ -35,10 +35,8 @@ def count_paragraphs(text: str):
     return len(paragraphs)
 
 def line_counter(text: str) -> int:
-    _lines = len(text) // 40
-    if len(text) % 40 != 0:
-        _lines += 1
-    return _lines
+    _lines = text.split('\n')
+    return len(_lines)
 
 def word_counter() -> dict:
     text = st.session_state['text']
